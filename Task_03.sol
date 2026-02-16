@@ -14,6 +14,6 @@ contract Task_03 {
    function getUser(uint _index) external view returns (string memory name, uint8 age) {
         require(_index < people.length, "Index out of bounds");
         Person memory person = people[_index];
-        
+        return (person.name, person.age); 
     }
 }
